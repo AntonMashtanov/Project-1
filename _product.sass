@@ -1,0 +1,116 @@
+.slider
+    padding-block: 11px 42px
+    display: flex
+    justify-content: center
+    position: relative
+    background-color: #F7F7F7
+    border: 1px solid #EAEAEA
+    box-sizing: border-box
+    &__button
+        width: 47px
+        height: 47px
+        background-color: rgba(42, 42, 42, 0.15)
+        position: absolute
+        border: none
+        z-index: 100
+        &:hover i
+            scale: 1.2
+        &:active i
+            scale: 1
+        &_left
+            color: #000000
+            left: -1px
+            top: 365px
+            border-left: 1px solid rgba(42, 42, 42, 0.05)
+
+        &_right
+            color: $colorSelect
+            right: -1px
+            top: 365px
+            border-right: 1px solid rgba(42, 42, 42, 0.05)
+
+.info
+    margin: 20px 0 43px
+    &__block
+        border: 1px solid #EAEAEA
+        min-height: 601px
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__top
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-block: 64px
+    &__header
+        display: flex
+        flex-direction: column
+        gap: 12px
+        align-items: center
+    &__h4
+        font-weight: 300
+        font-size: 14px
+        color: $colorSelect
+        text-align: center
+    &__border
+        height: 3px
+        width: 63px
+        background-color: #EF5B70
+    &__h3
+        font-weight: 300
+        font-size: 18px
+        color: #4d4d4d
+        padding: 0 0 48px
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 32px
+        align-items: center
+        padding: 0 45px 64px
+        width: 642px
+        border-bottom: 1px solid #EAEAEA
+    &__text
+        font-weight: 300
+        font-size: 14px
+        text-align: center
+        color: #5e5e5e
+    &__price
+        font-weight: 300
+        font-size: 24px
+        color: #ef5b70
+
+.sort
+    &__product
+        display: flex
+        gap: 23px
+
+.cart-button
+    &_product-style
+        border: 1px solid #FF6A6A
+        margin: 48px 0 64px
+        transition: 300ms
+        padding: 15px 24px 9px
+        width: 211px
+        box-sizing: border-box
+        display: flex
+        gap: 23px
+        &:hover
+            background-color: #FF6A6A
+    &:hover &__text_pink
+        color: #fff
+
+    &:hover &__svg_product-style
+        fill: #fff
+    &__text
+        &_pink
+            font-weight: 400
+            font-size: 16px
+            color: $colorSelect
+            transition: 300ms
+    &__svg
+        &_product-style
+            fill: #ef5b70
+            transition: 300ms
+
+.product_margin
+    margin: 0 0 128px

@@ -1,0 +1,193 @@
+.breadcrumb
+    display: flex
+    justify-content: space-between
+    padding-block: 60px
+    background-color: #F8F3F4
+    &__heading
+        font-weight: 400
+        font-size: 24px
+        color: $colorSelect
+    &__link
+        text-decoration: none
+        font-weight: 300
+        font-size: 14px
+        color: #636363
+        transition: 400ms
+        &:last-child
+            font-weight: 700
+            color: $colorSelect
+        &:not(:last-child)::after
+            content: " / "
+        &:hover
+            font-weight: 700
+            color: $colorSelect
+        &:hover:not(:last-child)::after
+            color: #636363
+        &:not(:last-child)::after
+            color: #636363
+        &:not(:last-child):hover ~ &:last-child
+            font-weight: 300
+            color: #636363
+
+.filter-block
+    position: relative
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
+    margin-block: 45px 64px
+    &__filter
+        &_size
+            padding: 16px 0 0 16px
+            align-self: flex-start
+        &[open]
+            position: absolute
+            left: calc(50% - 570px)
+            top: 0
+            z-index: 100
+            background-color: #fff
+            box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21)
+            padding: 16px
+            width: 360px
+            box-sizing: border-box
+            transition: 300ms
+        &[open] .filter-block__summary
+            color: #EF5B70
+            margin: 0 0 16px
+        &[open] .filter-block__summary::after
+            content: url('img/catalog/filter-1.svg')
+    &__summary
+        list-style: none
+        font-weight: 600
+        font-size: 14px
+        color: #000
+        text-transform: uppercase
+        width: 70px
+        cursor: pointer
+        &::after
+            content: url('img/catalog/filter.svg')
+            padding: 0 0 0 11px
+
+    &__category
+        display: flex
+        flex-direction: column
+        gap: 18px
+    &__heading
+        list-style: none
+        border-left: 5px solid #EF5B70
+        border-bottom: 1px solid #ebebeb
+        font-weight: 400
+        font-size: 14px
+        color: $colorSelect
+        padding: 11px
+        cursor: pointer
+    &__text
+        font-weight: 400
+        font-size: 14px
+        color: #6f6e6e
+        cursor: default
+        &:first-child
+            padding: 24px 0 0
+        &:hover
+            color: #222121
+    &__choice
+        display: flex
+        flex-direction: column
+        gap: 11px
+
+.sort
+    &__catalog
+        display: flex
+        gap: 28px
+        grid-column: 2 / 3
+        align-self: flex-start
+        padding: 16px 0 0
+    &__summary
+        list-style: none
+        font-weight: 400
+        font-size: 14px
+        color: #6f6e6e
+        box-sizing: border-box
+
+        &::after
+            content: ''
+            background-image: url('img/catalog/arrow.svg')
+            background-repeat: no-repeat
+            padding: 0 0 0 10px
+            background-position: center
+            margin: 0 0 0 10px
+    &__details
+        cursor: pointer
+        position: relative
+        &[open] .sort__size
+            box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21)
+            background: #fff
+    &__size
+        display: flex
+        flex-direction: column
+        position: absolute
+        z-index: 100
+        padding: 9px 7px 11px
+        width: 67px
+        left: -9px
+        top: 22px
+        box-sizing: border-box
+    &__span
+        &_color
+            font-weight: 400
+            font-size: 14px
+            color: #6f6e6e
+            display: block
+            padding: 0 0 0 21px
+    &__checkbox
+        display: flex
+        align-items: flex-start
+        position: relative
+        width: 40px
+        &::before
+            content: ""
+            display: flex
+            width: 12px
+            height: 12px
+            border: 1px solid #EBEBEB
+            margin: 5px 0 0 0
+            align-items: center
+            justify-content: center
+            position: absolute
+            left: 0
+            top: 0
+            box-sizing: border-box
+        &:has(input:checked)::before
+            content: '✔'
+            width: 12px
+            height: 12px
+            color: $colorSelect
+    &__input
+        display: none
+
+.card
+    &__pagination
+        grid-column: 2 / 3
+        align-items: center
+        padding: 15px 16px
+        border: 1px solid #EBEBEB
+        margin: 0 0 96px
+    &__ul
+        display: flex
+        align-items: center
+        justify-content: center
+    &__li
+        margin: 0 20px 0 0
+        &:nth-child(7)
+            margin: 0
+
+        &:nth-child(2) .card__link
+            color: $colorSelect
+        &:hover:not(:nth-child(2)) .card__link
+            color: $colorSelect
+        &:nth-last-child(2)::before
+            content: '......'
+            color: #c4c4c4
+    &__link
+        text-decoration: none
+        color: #c4c4c4
+        transition: 400ms

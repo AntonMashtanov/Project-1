@@ -1,0 +1,55 @@
+.page-content
+    display: flex
+    gap: 128px
+    padding-block: 64px 96px
+
+.registration
+    @include flex-column
+    gap: 31px
+    width: 360px
+    &__heading
+        font-weight: 300
+        font-size: 16px
+        color: #222
+    &__input
+        font-weight: 300
+        font-size: 13px
+        color: #b1b1b1
+        padding: 16px 17px
+    &__input-block
+        @include flex-column
+        gap: 20px
+    &__wrapper
+        display: flex
+        gap: 20px
+    &__label
+        font-weight: 300
+        font-size: 13px
+        color: #000
+        display: flex
+        align-items: center
+        gap: 10px
+    &__span
+        padding-top: 4px
+    &__requirement
+        font-weight: 300
+        font-size: 13px
+        color: #b1b1b1
+    &__button
+        width: 167px
+        display: flex
+        gap: 20px
+        height: 50px
+        align-items: center
+        justify-content: center
+
+.perks
+    @include flex-column
+    gap: 22px
+    &__text
+        font-weight: 300
+        font-size: 24px
+        color: #000
+        &_marker-left::before
+            content: url('img/general images/check.svg')
+            padding: 0 18px 0 0

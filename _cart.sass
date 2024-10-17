@@ -1,0 +1,133 @@
+.cart
+    display: flex
+    padding-block: 96px 128px
+    gap: 128px
+    &__products
+        display: flex
+        flex-direction: column
+        gap: 40px
+    &__item
+        height: 306px
+        width: 652px
+        display: flex
+        gap: 31px
+        border: 1px solid #EAEAEA
+        box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13)
+    &__img
+        height: 100%
+    &__info
+        padding: 22px 0 62px
+        @include flex-column
+    &__heading
+        font-weight: 400
+        font-size: 24px
+        color: #222
+        padding: 0 0 42px
+    &__list
+        font-weight: 400
+        font-size: 22px
+        color: #575757
+    &__price_color
+        color: $colorSelect
+    &__close
+        align-self: flex-start
+        padding: 32px 22px 0 95px
+        outline: none
+        & svg
+            width: 18px
+    &__wrapper
+        padding: 32px 0 0
+        display: flex
+        justify-content: space-between
+    &__button_style, &__link-from-catalog
+        border: 1px solid #A4A4A4
+        text-align: center
+        font-weight: 300
+        font-size: 14px
+        color: #000
+        padding: 17px 0
+        outline: none
+        transition: 300ms
+        cursor: pointer
+        width: 225px
+        height: 50px
+        box-sizing: border-box
+        &:hover
+            background-color: #A4A4A4
+            color: #fff
+    &__link-from-catalog
+        text-decoration: none
+    &__wrapper-block
+        @include flex-column
+        gap: 40px
+
+.adress
+    @include flex-column
+    gap: 20px
+    height: 306px
+    &__heading
+        font-weight: 300
+        font-size: 16px
+        color: #222
+    &__get
+        background-color: #FFFFFF
+        font-weight: 300
+        font-size: 11px
+        color: #4a4a4a
+        width: 102px
+        height: 34px
+        text-align: center
+        padding: 0
+    &__select, &__postcode
+        font-weight: 400
+        color: #222
+    &__select::-webkit-calendar-picker-indicator
+        display: none !important
+
+.input_style-common
+    border: 1px solid #A4A4A4
+    outline: none
+    width: 360px
+    height: 45px
+    box-sizing: border-box
+    padding: 13px 17px 16px
+
+.total
+    background-color: #f5f3f3
+    padding: 39px 44px 42px
+    &__info
+        @include flex-column
+        gap: 12px
+        padding: 0 0 21px
+        align-items: flex-end
+        border-bottom: 1px solid #e2e2e2
+    &__text
+        font-weight: 400
+        font-size: 11px
+        color: #4a4a4a
+        &_size_big
+            font-weight: 300
+            font-size: 16px
+            color: #222
+        &_color_pink
+            font-weight: 700
+            color: $colorSelect
+        &_word-spacing
+            padding: 0 0 0 20px
+    &__button
+        width: 273px
+        height: 50px
+        margin: 17px 0 0
+        border: none
+        transition: 200ms
+        font-weight: 300
+        font-size: 16px
+
+.button-common
+    text-align: center
+    background-color: #F16D7F
+    color: #fff
+    outline: none
+    border: none
+    &:hover
+        background-color: #f3576c
